@@ -2,18 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cyberbullying Detector Chat</title>
+    <title>Cyberbullying Chat Detector</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="chat-container">
+    <div class="theme-toggle">
+        <button id="themeBtn">🌓</button>
+    </div>
+
+    <div class="chat-container" id="chatContainer">
         <div class="chat-header">Cyberbullying Chat Detector</div>
-        <div class="chat-window" id="chatWindow"></div>
+        <div class="chat-window" id="chatWindow" ondragover="event.preventDefault()" ondrop="handleDrop(event)">
+        </div>
+        <div id="typingIndicator" class="typing-indicator">Bot is typing...</div>
+
         <div class="chat-input-area">
-            <input type="text" id="messageInput" placeholder="Type your message...">
+            <input type="text" id="messageInput" placeholder="Type your message or use emojis...">
+            <button id="emojiBtn">😊</button>
             <button id="sendBtn">Send</button>
         </div>
     </div>
+
+    <!-- Emoji Picker (third-party optional) -->
+    <div id="emojiPicker" style="display:none;">😀 😁 😂 😍 😢 😡 💀 👍 👎 🚫</div>
+
     <script src="script.js"></script>
 </body>
 </html>
