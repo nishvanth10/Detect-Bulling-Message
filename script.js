@@ -67,8 +67,6 @@ function simulateBotResponse(message) {
 messageInput.addEventListener("keypress", e => {
     if (e.key === "Enter") sendBtn.click();
 });
-
-
 emojiBtn.onclick = () => {
     emojiPicker.style.display = emojiPicker.style.display === "none" ? "block" : "none";
 };
@@ -79,8 +77,6 @@ emojiPicker.addEventListener("click", e => {
         emojiPicker.style.display = "none";
     }
 });
-
-
 function handleDrop(event) {
     event.preventDefault();
     const file = event.dataTransfer.files[0];
@@ -94,8 +90,6 @@ function handleDrop(event) {
     };
     reader.readAsText(file);
 }
-
-// Theme switcher
 themeBtn.onclick = () => {
     document.body.classList.toggle("dark-mode");
 };
